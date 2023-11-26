@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="548.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Login">
+   <AnchorPane fx:id="pane_top" prefHeight="20.0" prefWidth="931.0" style="-fx-background-color: #003c8f;">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="911.0" prefHeight="20.0" prefWidth="20.0"
+             styleClass="close-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE"
+             textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="1.5em"/>
+         </graphic>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="891.0" prefHeight="20.0" prefWidth="20.0"
+             styleClass="mini-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE"
+             textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" onMouseClicked="#minus" size="1.5em" translateY="1.1"/>
+         </graphic>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_fisso" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+               pickOnBounds="false" prefHeight="548.0" prefWidth="931.0">
+      <Text fx:id="text_signup" fill="#004ba0" layoutX="500.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Crea un Account" textAlignment="CENTER" visible="false" wrappingWidth="230.78125">
+         <font>
+            <Font name="System Bold" size="16.0"/>
+         </font>
+      </Text>
+      <Text fx:id="text_signup1" fill="#004ba0" layoutX="543.0" layoutY="135.0" strokeType="OUTSIDE"
+            strokeWidth="0.0" text="Registrati per poter giocare" visible="false"/>
+      <JFXTextField fx:id="edit_signupName" focusColor="#1976d2" layoutX="404.0" layoutY="209.0" prefHeight="38.0"
+                    prefWidth="193.0" promptText="Nome" visible="false"/>
+      <JFXTextField fx:id="edit_signupSurname" focusColor="#1976d2" layoutX="651.0" layoutY="209.0" prefHeight="38.0"
+                    prefWidth="193.0" promptText="Cognome" visible="false"/>
+      <JFXTextField fx:id="edit_signupUsername" focusColor="#1976d2" layoutX="404.0" layoutY="279.0"
+                    prefHeight="38.0" prefWidth="193.0" promptText="Username" visible="false"/>
+      <JFXTextField fx:id="edit_signupEmail" focusColor="#1976d2" layoutX="651.0" layoutY="279.0" prefHeight="38.0"
+                    prefWidth="193.0" promptText="Email" visible="false"/>
+      <JFXButton fx:id="btn_signup" layoutX="550.0" layoutY="438.0" onAction="#btn_signup" prefHeight="38.0"
+                 prefWidth="152.0"
+                 style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; "
+                 text="REGISTRATI" textFill="WHITE" textOverrun="CLIP" visible="false"/>
+      <Text fx:id="text_login" fill="#004ba0" layoutX="543.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Accedi al tuo Account">
+         <font>
+            <Font name="System Bold" size="16.0"/>
+         </font>
+      </Text>
+      <Text fx:id="text_login1" fill="#004ba0" layoutX="574.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Accedi per giocare"/>
+      <JFXTextField fx:id="edit_emailLogin" focusColor="#1976d2" layoutX="527.0" layoutY="193.0" prefHeight="38.0"
+                    prefWidth="193.0" promptText="Email"/>
+      <JFXPasswordField fx:id="edit_passwordLogin" focusColor="#1976d2" layoutX="529.0" layoutY="263.0"
+                        prefHeight="38.0" prefWidth="193.0" promptText="Password"/>
+      <Text fx:id="text_passwordForbidden" fill="#1976d2" layoutX="563.0" layoutY="395.0" onMouseClicked="#pass_forb"
+            strokeType="OUTSIDE" strokeWidth="0.0" text="Password dimenticata?"/>
+      <JFXButton fx:id="btn_login" layoutX="549.0" layoutY="438.0" onAction="#btn_login" prefHeight="38.0"
+                 prefWidth="152.0"
+                 style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; "
+                 text="ACCEDI" textFill="WHITE" textOverrun="CLIP"/>
+      <Text fx:id="text_passF" fill="#004ba0" layoutX="541.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Password Dimenticata" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0"/>
+         </font>
+      </Text>
+      <JFXTextField fx:id="edit_emailForbidden" focusColor="#1976d2" layoutX="501.0" layoutY="255.0"
+                    prefHeight="38.0" prefWidth="251.0" promptText="Email" visible="false"/>
+      <JFXButton fx:id="btn_passwordForbidden" layoutX="539.0" layoutY="430.0" onAction="#btn_passwordForbidden"
+                 prefHeight="38.0" prefWidth="176.0"
+                 style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 1.5;"
+                 text="Richiedi nuova Password" textFill="#004ba0" textOverrun="CLIP" visible="false"/>
+      <Text fx:id="text_backForbidden" fill="#1976d2" layoutX="587.0" layoutY="395.0" onMouseClicked="#backF"
+            strokeType="OUTSIDE" strokeWidth="0.0" text="Torna indietro" visible="false"/>
+      <Text fx:id="text_error" fill="#c62828" layoutX="529.0" layoutY="418.0" onMouseClicked="#pass_forb"
+            strokeType="OUTSIDE" strokeWidth="0.0" text="Email o Passwor non corretti" textAlignment="CENTER"
+            visible="false" wrappingWidth="193.00001542270184"/>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_mobile" layoutY="20.0" prefHeight="528.0" prefWidth="311.0"
+               style="-fx-background-color: #004ba0;">
+      <effect>
+         <DisplacementMap>
+            <mapData>
+               <FloatMap/>
+            </mapData>
+         </DisplacementMap>
+      </effect>
+      <JFXButton fx:id="btn_LoginTans" layoutX="79.0" layoutY="322.0" onAction="#btn_LoginTans" prefHeight="38.0"
+                 prefWidth="152.0" style="-fx-border-radius: 30; -fx-border-color: #FFF; -fx-background-radius: 30;"
+                 text="ACCEDI" textFill="WHITE" textOverrun="CLIP" visible="false"/>
+      <Text fx:id="text_welcome" fill="WHITE" layoutX="64.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Benvenuto!">
+         <font>
+            <Font name="System Bold" size="34.0"/>
+         </font>
+      </Text>
+      <Text fx:id="text_loginText" fill="WHITE" layoutX="35.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Gioca contro altre persone per riuscire ad indovinare le frase e riuscire a battere tutti"
+            textAlignment="CENTER" visible="false" wrappingWidth="240.74609375">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Text>
+      <Text fx:id="text_signupText" fill="WHITE" layoutX="35.0" layoutY="183.0" strokeType="OUTSIDE"
+            strokeWidth="0.0" text="Inserisci le tue informazioni e inizia a competere contro altri giocatori"
+            textAlignment="CENTER" wrappingWidth="240.74609375">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Text>
+      <JFXButton fx:id="btn_signupTrans" layoutX="79.0" layoutY="322.0" onAction="#btn_signupTrans" prefHeight="38.0"
+                 prefWidth="152.0" style="-fx-border-radius: 30; -fx-border-color: #FFF; -fx-background-radius: 30;"
+                 text="REGISTRATI" textFill="WHITE" textOverrun="CLIP"/>
+   </AnchorPane>
+</AnchorPane>

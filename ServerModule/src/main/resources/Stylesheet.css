@@ -1,0 +1,43 @@
+.mini-btn{
+     -fx-background-color: transparent;
+ }
+.mini-btn:hover{
+    -fx-background-color: #1565c0;
+}
+.acc{
+     -fx-background-color: transparent;
+ }
+.acc:hover{
+    -fx-background-color: #287cc0;
+}
+.tut{
+    -fx-background-color: transparent;
+}
+.tut:hover{
+    -fx-background-color: #69a4c0;
+}
+.searchL{
+    -fx-background-color: transparent;
+}
+.searchL:hover{
+    -fx-background-color: rgba(40, 157, 214, 0.27);
+}
+.p1{
+    -fx-background-color: #dddddd;
+}
+.p1:hover{
+    -fx-background-color: #c5c5c5;
+}
+.close-btn{
+    -fx-background-color: transparent;
+}
+.close-btn:hover{
+    -fx-background-color: #c62828;
+}
+.AD{
+    -fx-background-color: #ff5f52;
+}
+.AD:hover{
+    -fx-background-color: #c62828;
+}
+

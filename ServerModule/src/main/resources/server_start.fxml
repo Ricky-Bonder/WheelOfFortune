@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Server">
+   <Text fill="#004ba0" layoutX="185.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SERVER" textAlignment="CENTER" wrappingWidth="144.89647781848907">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fill="#004ba0" layoutX="205.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ruota della Fortuna" />
+   <JFXButton fx:id="btn_stopServer" layoutX="149.0" layoutY="264.0" onAction="#btn_stop" prefHeight="25.0" prefWidth="216.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="STOP" textFill="WHITE" textOverrun="CLIP" visible="false" />
+   <JFXButton fx:id="btn_startServer" layoutX="181.0" layoutY="230.0" onAction="#btn_start" prefHeight="25.0" prefWidth="152.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #1976d2; " text="START" textFill="WHITE" textOverrun="CLIP" visible="false" />
+   <ProgressIndicator fx:id="progressbar" layoutX="222.0" layoutY="112.0" prefHeight="73.0" prefWidth="71.0" visible="false" />
+   <Text fx:id="text_serverStartStop" fill="#004ba0" layoutX="189.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="server started.." textAlignment="CENTER" visible="false" wrappingWidth="136.19287109375" />
+   <AnchorPane fx:id="pane_top" prefHeight="20.0" prefWidth="514.0" style="-fx-background-color: #003c8f;">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="494.0" prefHeight="20.0" prefWidth="20.0" styleClass="close-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="1.5em" />
+         </graphic>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="474.0" prefHeight="20.0" prefWidth="20.0" styleClass="mini-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" onMouseClicked="#minus" size="1.5em" translateY="1.1" />
+         </graphic>
+      </Label>
+   </AnchorPane>
+   <JFXTextField fx:id="edit_databaseName" layoutX="123.0" layoutY="122.0" prefHeight="27.0" prefWidth="272.0" promptText="Database name" />
+   <JFXTextField fx:id="edit_hostName" layoutX="123.0" layoutY="182.0" prefHeight="27.0" prefWidth="152.0" promptText="Host" />
+   <JFXTextField fx:id="edit_portName" layoutX="315.0" layoutY="182.0" prefHeight="27.0" prefWidth="81.0" promptText="Port" />
+   <JFXButton fx:id="btn_startDatabase" layoutX="151.0" layoutY="253.0" onAction="#btn_startA" prefHeight="25.0" prefWidth="216.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="START" textFill="WHITE" textOverrun="CLIP" />
+   <Pane fx:id="pane_noAdmin" layoutX="81.0" layoutY="122.0" prefHeight="97.0" prefWidth="353.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="75.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NESSUN ADMIN REGISTRATO!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fx:id="btn_closePane" fill="#004ba0" glyphName="CLOSE" layoutX="332.0" layoutY="20.0" onMouseClicked="#btn_closePane" size="1.5em" />
+      <Text layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrati come ADMIN" />
+      <FontAwesomeIcon fill="#004ba0" glyphName="WARNING" layoutX="22.0" layoutY="61.0" size="3em" />
+   </Pane>
+   <JFXTextField fx:id="edit_nameAdmin" layoutX="94.0" layoutY="113.0" promptText="Nome" visible="false" />
+   <JFXTextField fx:id="edit_surnameAdmin" layoutX="283.0" layoutY="113.0" promptText="Cognome" visible="false" />
+   <JFXTextField fx:id="edit_usernameAdmin" layoutX="94.0" layoutY="175.0" promptText="Username" visible="false" />
+   <JFXTextField fx:id="edit_emailAdmin" layoutX="283.0" layoutY="174.0" promptText="Email" visible="false" />
+   <JFXPasswordField fx:id="edit_passwordAdmin" layoutX="152.0" layoutY="206.0" prefHeight="27.0" prefWidth="216.0" promptText="Password" visible="false" />
+   <JFXButton fx:id="btn_signupAdmin" layoutX="151.0" layoutY="260.0" onAction="#btn_signupA" prefHeight="25.0" prefWidth="216.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="REGISTRATI" textFill="WHITE" textOverrun="CLIP" visible="false" />
+   <JFXTextField fx:id="edit_emailAdminLogin" layoutX="168.0" layoutY="122.0" prefHeight="27.0" prefWidth="185.0" promptText="Email" visible="false" />
+   <JFXPasswordField fx:id="edit_passwordAdminLogin" layoutX="167.0" layoutY="183.0" prefHeight="27.0" prefWidth="185.0" promptText="Password" visible="false" />
+   <JFXButton fx:id="btn_loginAdmin" layoutX="149.0" layoutY="253.0" onAction="#btn_loginA" prefHeight="25.0" prefWidth="216.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="LOGIN" textFill="WHITE" textOverrun="CLIP" visible="false" />
+   <Text fx:id="text_errorField" fill="#db3536" layoutX="171.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dati errati" textAlignment="CENTER" visible="false" wrappingWidth="176.34912109375" />
+</AnchorPane>

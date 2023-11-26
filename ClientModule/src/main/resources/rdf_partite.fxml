@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Partite">
+   <AnchorPane fx:id="pane_stat" layoutY="20.0" prefHeight="1554.0" prefWidth="296.0" style="-fx-background-color: #FFE0B2;">
+      <Text fill="#004ba0" layoutX="84.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATISTICHE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#004ba0" layoutX="105.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I MIGLIORI">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="4.0" layoutY="80.0" prefHeight="116.0" prefWidth="289.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="81.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="72.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Punteggio x Partita" wrappingWidth="105.939453125" />
+         <Text fx:id="text_T1_01_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Simo" textAlignment="CENTER" wrappingWidth="81.6484375" GridPane.columnIndex="1" />
+         <Text fx:id="text_T1_02_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="8542 punti" textAlignment="RIGHT" wrappingWidth="73.6484375" GridPane.columnIndex="2" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Punteggio x Manches" wrappingWidth="120.939453125" GridPane.rowIndex="1" />
+         <Text fx:id="text_T1_11_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ale" textAlignment="CENTER" wrappingWidth="81.6484375" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fx:id="text_T1_12_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="1803 punti" textAlignment="RIGHT" wrappingWidth="71.6484375" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Manches Giocate" wrappingWidth="130.939453125" GridPane.rowIndex="2" />
+         <Text fx:id="text_T1_21_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Nico" textAlignment="CENTER" wrappingWidth="81.6484375" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Text fx:id="text_T1_22_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="RIGHT" wrappingWidth="72.6484375" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Media punti x Manches" wrappingWidth="130.939453125" GridPane.rowIndex="3" />
+         <Text fx:id="text_T1_31_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ricky" textAlignment="CENTER" wrappingWidth="81.6484375" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <Text fx:id="text_T1_32_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="1500 punti" textAlignment="RIGHT" wrappingWidth="72.6484375" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      </GridPane>
+      <Text fill="#004ba0" layoutX="105.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I PEGGIORI">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="4.0" layoutY="247.0" prefHeight="51.0" prefWidth="282.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="81.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="72.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Turno Perso x Errori" wrappingWidth="130.939453125" />
+         <Text fx:id="text_T2_01_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ricky" textAlignment="CENTER" wrappingWidth="81.6484375" GridPane.columnIndex="1" />
+         <Text fx:id="text_T2_02_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="7 volte" textAlignment="RIGHT" wrappingWidth="72.6484375" GridPane.columnIndex="2" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Perso TUTTO" wrappingWidth="129.939453125" GridPane.rowIndex="1" />
+         <Text fx:id="text_T2_11_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ricky" textAlignment="CENTER" wrappingWidth="81.6484375" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fx:id="text_T2_12_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="3 volte" textAlignment="RIGHT" wrappingWidth="72.6484375" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      </GridPane>
+      <Text fill="#004ba0" layoutX="114.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PARTITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="4.0" layoutY="349.0" prefHeight="116.0" prefWidth="282.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="134.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Giocate" wrappingWidth="105.939453125" />
+         <Text fx:id="text_T3_01_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Abbandonate" wrappingWidth="120.939453125" GridPane.rowIndex="1" />
+         <Text fx:id="text_T3_11_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="RIGHT" wrappingWidth="135.6484375" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Finite" wrappingWidth="120.939453125" GridPane.rowIndex="2" />
+         <Text fx:id="text_T3_21_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite in Corso" wrappingWidth="130.939453125" GridPane.rowIndex="3" />
+         <Text fx:id="text_T3_31_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      </GridPane>
+      <JFXButton fx:id="btn_allStat" layoutX="69.0" layoutY="487.0" onAction="#btn_allStat" prefHeight="25.0" prefWidth="159.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0;" text="ALTRE STATISTICHE" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+      <Text fill="#004ba0" layoutX="119.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALTRO">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="4.0" layoutY="558.0" prefHeight="25.0" prefWidth="282.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="203.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="79.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="N°Medio Mosse Maches x Indovinare" wrappingWidth="202.939453125" />
+         <Text fx:id="text_T4_01_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="RIGHT" wrappingWidth="79.6484375" GridPane.columnIndex="1" />
+      </GridPane>
+      <Text fill="#004ba0" layoutX="29.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAX PUNTI CON CONSONANTE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="4.0" layoutY="629.0" prefHeight="91.0" prefWidth="282.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="134.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fx:id="text_T5_00_Cons" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="B" wrappingWidth="105.939453125" />
+         <Text fx:id="text_T5_01_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="120" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Utente" wrappingWidth="120.939453125" GridPane.rowIndex="1" />
+         <Text fx:id="text_T5_11_PlayerName" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ricky" textAlignment="RIGHT" wrappingWidth="135.6484375" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase" textAlignment="CENTER" wrappingWidth="282.939453125" GridPane.rowIndex="2" />
+         <Text fx:id="text_T5_3_Phrase" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Un bellissimo babbuino brutto" textAlignment="CENTER" wrappingWidth="282.939453125" GridPane.rowIndex="3" />
+      </GridPane>
+      <Text fill="#004ba0" layoutX="102.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GIOCATORE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="4.0" layoutY="792.0" prefHeight="214.0" prefWidth="282.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="134.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Giocate" wrappingWidth="105.939453125" />
+         <Text fx:id="text_T6_01_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Manches Giocate" wrappingWidth="120.939453125" GridPane.rowIndex="1" />
+         <Text fx:id="text_T6_11_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="135.6484375" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Vinte" wrappingWidth="120.939453125" GridPane.rowIndex="2" />
+         <Text fx:id="text_T6_21_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Turno Perso Partita" wrappingWidth="130.939453125" GridPane.rowIndex="4" />
+         <Text fx:id="text_T6_31_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Punteggio Medio" wrappingWidth="130.939453125" GridPane.rowIndex="3" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Turno Perso Manches" wrappingWidth="130.939453125" GridPane.rowIndex="5" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Perso Tutto x Manches" wrappingWidth="130.939453125" GridPane.rowIndex="7" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Perso Tutto x Partita" wrappingWidth="130.939453125" GridPane.rowIndex="6" />
+         <Text fx:id="text_T6_71_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <Text fx:id="text_T6_61_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         <Text fx:id="text_T6_51_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <Text fx:id="text_T6_41_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      </GridPane>
+      <JFXTextField fx:id="edit_player" focusColor="#004ba0" layoutX="8.0" layoutY="757.0" prefHeight="25.0" prefWidth="229.0" promptText="Nome player" />
+      <JFXButton fx:id="btn_search" buttonType="RAISED" contentDisplay="CENTER" layoutX="246.0" layoutY="759.0" onAction="#btn_search" prefHeight="25.0" prefWidth="40.0" ripplerFill="WHITE" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0;" styleClass="searchL" stylesheets="@Stylesheet.css" text=" " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="1.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#004ba0" glyphName="SEARCH" size="15em" />
+         </graphic>
+      </JFXButton>
+      <Text fill="#004ba0" layoutX="108.0" layoutY="1051.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCHEDA">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_currentPlayerName" fill="#004ba0" layoutX="81.0" layoutY="1165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME GIOCATORE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fill="#206db5" glyphName="USER" layoutX="125.0" layoutY="1131.0" size="5em" text="" />
+      <Text fill="#1976d2" layoutX="100.0" layoutY="1451.0" onMouseClicked="#text_ModifyPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifica Password" />
+      <JFXButton layoutX="54.0" layoutY="1492.0" onAction="#btn_logout" prefHeight="27.0" prefWidth="194.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="LOGOUT" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+      <JFXButton fx:id="btn_addAdmin" layoutX="71.0" layoutY="1460.0" onAction="#btn_addAdmin" prefHeight="25.0" prefWidth="159.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #206db5;" text="AGGIUNGI ADMIN" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+      <Text fill="#1976d2" layoutX="87.0" layoutY="1434.0" onMouseClicked="#text_modifyUserData" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifica dati del Profilo" />
+      <GridPane layoutX="7.0" layoutY="1193.0" prefHeight="214.0" prefWidth="282.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="134.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Giocate" wrappingWidth="105.939453125" />
+         <Text fx:id="text_T7_01_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Manches Giocate" wrappingWidth="120.939453125" GridPane.rowIndex="1" />
+         <Text fx:id="text_T7_11_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="135.6484375" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Partite Vinte" wrappingWidth="120.939453125" GridPane.rowIndex="2" />
+         <Text fx:id="text_T7_21_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Turno Perso Partita" wrappingWidth="130.939453125" GridPane.rowIndex="4" />
+         <Text fx:id="text_T7_31_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Punteggio Medio" wrappingWidth="130.939453125" GridPane.rowIndex="3" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Turno Perso Manches" wrappingWidth="130.939453125" GridPane.rowIndex="5" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Perso Tutto x Manches" wrappingWidth="130.939453125" GridPane.rowIndex="7" />
+         <Text fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="Perso Tutto x Partita" wrappingWidth="130.939453125" GridPane.rowIndex="6" />
+         <Text fx:id="text_T7_71_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <Text fx:id="text_T7_61_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         <Text fx:id="text_T7_51_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <Text fx:id="text_T7_41_Point" fill="#1976d2" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="134.6484375" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      </GridPane>
+      <AnchorPane fx:id="pane_modifyData" layoutX="18.0" layoutY="1189.0" prefHeight="334.0" prefWidth="260.0" style="-fx-background-color: #ffe0b2;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <JFXButton layoutX="65.0" layoutY="246.0" onAction="#btn_saveModifyData" prefHeight="25.0" prefWidth="127.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="SALVA" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+         <Text fill="#1976d2" layoutX="85.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICA DATI">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <JFXTextField fx:id="edit_ModifyName" layoutX="14.0" layoutY="73.0" prefHeight="25.0" prefWidth="229.0" promptText="Nome" />
+         <JFXTextField fx:id="edit_ModifySurname" layoutX="14.0" layoutY="119.0" prefHeight="25.0" prefWidth="229.0" promptText="Cognome" />
+         <JFXTextField fx:id="edit_ModUser" layoutX="16.0" layoutY="186.0" prefHeight="25.0" prefWidth="229.0" promptText="User" />
+         <JFXButton layoutX="43.0" layoutY="279.0" onAction="#btn_cancelModify" prefHeight="25.0" prefWidth="171.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="ANNULLA" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+      </AnchorPane>
+      <AnchorPane fx:id="pane_modifyPassword" layoutX="18.0" layoutY="1189.0" prefHeight="334.0" prefWidth="260.0" style="-fx-background-color: #ffe0b2;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <JFXButton layoutX="65.0" layoutY="246.0" onAction="#btn_saveModifyPassword" prefHeight="25.0" prefWidth="127.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="SALVA" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+         <Text fill="#1976d2" layoutX="66.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICA PASSWORD">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <JFXTextField fx:id="edit_ModifyPasswordOld" accessibleRole="PASSWORD_FIELD" layoutX="16.0" layoutY="52.0" prefHeight="25.0" prefWidth="229.0" promptText="Vecchia Password" />
+         <JFXTextField fx:id="edit_ModifyPasswordNew" accessibleRole="PASSWORD_FIELD" layoutX="16.0" layoutY="121.0" prefHeight="25.0" prefWidth="229.0" promptText="Nuova Password" />
+         <JFXButton layoutX="43.0" layoutY="279.0" onAction="#btn_cancelModify" prefHeight="25.0" prefWidth="171.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="ANNULLA" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+         <JFXTextField fx:id="edit_ModifyPasswordNew2" accessibleRole="PASSWORD_FIELD" layoutX="16.0" layoutY="164.0" prefHeight="25.0" prefWidth="229.0" promptText="Ripeti Password" />
+      </AnchorPane>
+      <AnchorPane fx:id="pane_error" layoutX="7.0" layoutY="1261.0" prefHeight="72.0" prefWidth="282.0" style="-fx-background-color: #f5f5f6;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <Text fx:id="text_error" fill="#004ba0" layoutX="44.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEI SICURO?">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <FontAwesomeIcon fx:id="btn_closeError" fill="#004ba0" glyphName="CLOSE" layoutX="261.0" layoutY="20.0" onMouseClicked="#btn_closeError" size="1.5em" />
+         <Text fx:id="text_error1" layoutX="44.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Non ho trovato nessuno" />
+         <FontAwesomeIcon fill="#004ba0" glyphName="EXCLAMATION" layoutX="21.0" layoutY="48.0" size="3em" />
+      </AnchorPane>
+      <AnchorPane fx:id="pane_addAdmin" layoutX="18.0" layoutY="1196.0" prefHeight="334.0" prefWidth="260.0" style="-fx-background-color: #ffe0b2;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <JFXTextField fx:id="edit_userAD" layoutX="16.0" layoutY="38.0" prefHeight="25.0" prefWidth="229.0" promptText="Nome" />
+         <JFXButton fx:id="btn_saveAD" layoutX="65.0" layoutY="246.0" onAction="#btn_saveAD" prefHeight="25.0" prefWidth="127.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="SALVA" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+         <Text fill="#1976d2" layoutX="83.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AGGIUNGI ADMIN">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <JFXButton layoutX="43.0" layoutY="279.0" onAction="#btn_cancelModify" prefHeight="25.0" prefWidth="171.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="ANNULLA" textAlignment="CENTER" textFill="#ffe0b2" textOverrun="CLIP" />
+         <JFXTextField fx:id="edit_surnameAD" layoutX="16.0" layoutY="74.0" prefHeight="25.0" prefWidth="229.0" promptText="Cognome" />
+         <JFXTextField fx:id="edit_emailAD" layoutX="16.0" layoutY="178.0" prefHeight="25.0" prefWidth="229.0" promptText="Password" />
+         <JFXTextField fx:id="edit_usernameAD" layoutX="16.0" layoutY="140.0" prefHeight="25.0" prefWidth="229.0" promptText="Username" />
+      </AnchorPane>
+      <AnchorPane fx:id="pane_noPlayerSearch" layoutX="7.0" layoutY="750.0" prefHeight="72.0" prefWidth="282.0" style="-fx-background-color: #f5f5f6;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <Text fill="#004ba0" layoutX="44.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEI SICURO?">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+         <FontAwesomeIcon fill="#004ba0" glyphName="CLOSE" layoutX="261.0" layoutY="20.0" onMouseClicked="#btn_closeNoPlayerSearch" size="1.5em" />
+         <Text layoutX="44.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Non ho trovato nessuno" />
+         <FontAwesomeIcon fill="#004ba0" glyphName="EXCLAMATION" layoutX="21.0" layoutY="48.0" size="3em" />
+      </AnchorPane>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_top" prefHeight="20.0" prefWidth="931.0" style="-fx-background-color: #003c8f;">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="911.0" prefHeight="20.0" prefWidth="20.0" styleClass="close-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="1.5em" />
+         </graphic>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="891.0" prefHeight="20.0" prefWidth="20.0" styleClass="mini-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" onMouseClicked="#minus" size="1.5em" translateY="1.1" />
+         </graphic>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" prefHeight="20.0" prefWidth="20.0" styleClass="acc" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fx:id="fonta_UserORStat" fill="WHITE" glyphName="USER" onMouseClicked="#account" size="1.3em" />
+         </graphic>
+      </Label>
+      <Text fx:id="text_CurrentUserORStat" fill="WHITE" layoutX="41.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Account" wrappingWidth="120.9394339621067" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="20.0" styleClass="tut" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fx:id="fonta_Tutorial" fill="WHITE" glyphName="QUESTION" onMouseClicked="#tutorial" size="1.5em" />
+         </graphic>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_gameAndPhrases" layoutX="295.0" layoutY="20.0" prefHeight="528.0" prefWidth="1568.0" style="-fx-background-color: #e9e9e9;">
+      <ScrollPane fx:id="scroll_Game" hbarPolicy="NEVER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="478.0" prefWidth="636.0">
+         <AnchorPane prefHeight="474.0" prefWidth="636.0">
+            <Label fx:id="pane_game" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer" disable="true" layoutX="530.0" layoutY="15.0" onAction="#btn_Observer" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game1" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame1" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating1" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer1" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer1" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin1" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin1" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd1" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game2" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame2" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating2" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer2" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer2" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin2" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin2" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd2" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game3" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame3" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating3" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer3" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer3" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin3" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin3" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd3" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game4" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame4" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating4" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer4" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer4" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin4" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin4" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd4" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game5" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame5" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating5" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer5" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer5" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin5" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin5" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd5" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game6" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame6" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating6" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer6" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer6" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin6" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin6" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd6" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game7" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame7" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating7" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer7" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer7" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin7" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin7" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd7" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game8" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame8" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating8" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer8" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer8" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin8" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin8" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd8" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_game9" layoutY="-68.0" prefHeight="62.0" prefWidth="636.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="636.0">
+                     <Text fx:id="text_NameGame9" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partita 5789">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_GameWating9" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In attesa di giocatori..." />
+                     <JFXButton fx:id="btn_Observer9" disable="true" layoutX="534.0" layoutY="15.0" onAction="#btn_Observer9" prefHeight="32.0" prefWidth="80.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #1976d2; -fx-border-width: 2;" text="OSSERVA" textAlignment="CENTER" textFill="#1976d2" textOverrun="CLIP" />
+                     <JFXButton fx:id="btn_JGameJoin9" layoutX="424.0" layoutY="15.0" onAction="#btn_JGameJoin9" prefHeight="32.0" prefWidth="102.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0; -fx-border-width: 2;" text="PARTECIPA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+                     <Text fx:id="text_GameEnd9" fill="#ee8503" layoutX="484.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+         </AnchorPane>
+      </ScrollPane>
+      <ScrollPane fx:id="scroll_Phrases" hbarPolicy="NEVER" layoutX="636.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="478.0" prefWidth="931.0">
+         <AnchorPane prefHeight="474.0" prefWidth="931.0">
+            <Label fx:id="pane_Phrase" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify" size="2em" />
+                     <Text fx:id="text_ID_Phrases" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase1" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle1" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint1" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel1" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete1" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify1" size="2em" />
+                     <Text fx:id="text_ID_Phrases1" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase2" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle2" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint2" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel2" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete2" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify2" size="2em" />
+                     <Text fx:id="text_ID_Phrases2" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase3" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle3" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint3" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel3" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete3" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify3" size="2em" />
+                     <Text fx:id="text_ID_Phrases3" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase4" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle4" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint4" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel4" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete4" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify4" size="2em" />
+                     <Text fx:id="text_ID_Phrases4" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase5" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle5" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint5" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel5" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete5" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify5" size="2em" />
+                     <Text fx:id="text_ID_Phrases5" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase6" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle6" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint6" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel6" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete6" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify6" size="2em" />
+                     <Text fx:id="text_ID_Phrases6" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase7" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle7" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint7" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel7" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete7" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify7" size="2em" />
+                     <Text fx:id="text_ID_Phrases7" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase8" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle8" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint8" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel8" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete8" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify8" size="2em" />
+                     <Text fx:id="text_ID_Phrases8" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Label fx:id="pane_Phrase9" layoutY="-68.0" prefHeight="62.0" prefWidth="931.0" styleClass="p1" stylesheets="@Stylesheet.css" text="Label">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="929.0">
+                     <Text fx:id="text_PhraseTitle9" fill="#004ba0" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frase 0" wrappingWidth="392.73046875">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Text fx:id="text_PhraseHint9" fill="#1976d2" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hint 0" wrappingWidth="477.728515625" />
+                     <Text fx:id="text_PhraseCancel9" fill="#ee8503" layoutX="805.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELIMINATA" visible="false">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <FontAwesomeIcon fill="#012e5e" glyphName="TRASH" layoutX="881.0" layoutY="30.0" onMouseClicked="#edit_Delete9" size="2em" />
+                     <FontAwesomeIcon fill="#012e5e" glyphName="EDIT" layoutX="852.0" layoutY="32.0" onMouseClicked="#edit_Modify9" size="2em" />
+                     <Text fx:id="text_ID_Phrases9" fill="#012e5e" layoutX="852.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+                        <font>
+                           <Font name="System Bold" size="13.0" />
+                        </font>
+                     </Text>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+         </AnchorPane>
+      </ScrollPane>
+      <JFXButton fx:id="btn_CreatePhrase" layoutX="994.0" layoutY="488.0" onAction="#btn_CreatePhrase" prefHeight="32.0" prefWidth="215.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800; " text="CREA FRASE" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <JFXButton fx:id="btn_Phrases" layoutX="211.0" layoutY="488.0" onAction="#btn_Phrases" prefHeight="32.0" prefWidth="215.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800; " text="GESTISCI FRASI MISTERIOSE" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" visible="false" />
+      <JFXButton fx:id="btn_CreateGames" layoutX="211.0" layoutY="488.0" onAction="#btn_CreateGames" prefHeight="32.0" prefWidth="215.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800; " text="CREAUNA NUOVA PARTITA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <Separator layoutY="477.0" prefHeight="3.0" prefWidth="1568.0" />
+      <Separator layoutX="-1.0" orientation="VERTICAL" prefHeight="528.0" prefWidth="0.0" />
+      <Separator layoutX="635.0" orientation="VERTICAL" prefHeight="528.0" prefWidth="0.0" />
+      <AnchorPane fx:id="pane_editPhrases" layoutX="665.0" layoutY="24.0" prefHeight="430.0" prefWidth="874.0" style="-fx-background-color: #f5f5f6;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <JFXTextField fx:id="edit_hintPhrases" focusColor="#1976d2" layoutX="18.0" layoutY="51.0" prefHeight="25.0" prefWidth="839.0" promptText="Hint">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </JFXTextField>
+         <JFXTextArea fx:id="edit_textPhrases" focusColor="#1976d2" layoutX="18.0" layoutY="126.0" prefHeight="241.0" prefWidth="839.0" promptText="Frase">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </JFXTextArea>
+         <Text fill="#004ba0" layoutX="225.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICA LA FRASE MISTERIOSA" textAlignment="CENTER" wrappingWidth="425.99609375">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Text>
+         <JFXButton fx:id="btn_SavePhrases" layoutX="309.0" layoutY="384.0" onAction="#btn_SavePhrases" prefHeight="32.0" prefWidth="106.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="SALVA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+         <JFXButton fx:id="btn_cancelPhrases" layoutX="455.0" layoutY="384.0" onAction="#btn_cancelPhrases" prefHeight="32.0" prefWidth="106.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="ANNULLA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+         <Text fx:id="text_ID_ModifyPhrases" fill="#012e5e" layoutX="831.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID 1" textAlignment="CENTER" wrappingWidth="51.07143813371658">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Text>
+      </AnchorPane>
+      <JFXButton fx:id="btn_refresh" layoutX="595.0" layoutY="488.0" onAction="#btn_refresh" prefHeight="32.0" prefWidth="33.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800;" text=" " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <FontAwesomeIcon fill="WHITE" glyphName="REFRESH" layoutX="603.0" layoutY="511.0" mouseTransparent="true" size="1.5em" />
+      <JFXButton fx:id="btn_GamesBack" layoutX="644.0" layoutY="488.0" onAction="#btn_GamesBack" prefHeight="32.0" prefWidth="33.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800;" text=" " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" layoutX="651.5" layoutY="511.0" mouseTransparent="true" size="1.5em" />
+      <AnchorPane fx:id="pane_createPhrases" layoutX="665.0" layoutY="24.0" prefHeight="430.0" prefWidth="874.0" style="-fx-background-color: #f5f5f6;" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <JFXTextField fx:id="edit_createHintPhrases" focusColor="#1976d2" layoutX="18.0" layoutY="51.0" prefHeight="25.0" prefWidth="839.0" promptText="Hint">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </JFXTextField>
+         <JFXTextArea fx:id="edit_createTextPhrases" focusColor="#1976d2" layoutX="18.0" layoutY="126.0" prefHeight="241.0" prefWidth="839.0" promptText="Frase">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </JFXTextArea>
+         <Text fill="#004ba0" layoutX="225.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREA UNA FRASE MISTERIOSA" textAlignment="CENTER" wrappingWidth="425.99609375">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Text>
+         <JFXButton layoutX="309.0" layoutY="384.0" onAction="#btn_SaveCreatePhrases" prefHeight="32.0" prefWidth="106.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="CREA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+         <JFXButton layoutX="455.0" layoutY="384.0" onAction="#btn_cancelPhrases" prefHeight="32.0" prefWidth="106.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0; " text="ANNULLA" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      </AnchorPane>
+      <JFXButton fx:id="btn_refreshF" layoutX="1487.0" layoutY="488.0" onAction="#btn_refreshF" prefHeight="32.0" prefWidth="33.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800;" text=" " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <FontAwesomeIcon fill="WHITE" glyphName="REFRESH" layoutX="1495.0" layoutY="511.0" mouseTransparent="true" size="1.5em" />
+      <JFXButton layoutX="1527.0" layoutY="488.0" onAction="#btn_csv" prefHeight="32.0" prefWidth="33.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #FF9800;" text=" " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="1536.0" layoutY="512.0" mouseTransparent="true" size="1.5em" />
+      <AnchorPane fx:id="pane_CSV" layoutX="1357.0" layoutY="488.0" prefHeight="32.0" prefWidth="203.0" style="-fx-background-color: f1c992; -fx-background-radius: 30;" visible="false">
+         <JFXTextField fx:id="edit_CSV_PATCH" layoutX="14.0" layoutY="3.0" prefHeight="22.0" prefWidth="148.0" promptText="Path CSV">
+            <font>
+               <Font size="11.0" />
+            </font>
+         </JFXTextField>
+         <FontAwesomeIcon fill="#4059a9" glyphName="CHECK" layoutX="168.0" layoutY="27.0" onMouseClicked="#font_checkCSV" size="2em" />
+      </AnchorPane>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_lobby" layoutX="412.0" layoutY="158.0" prefHeight="202.0" prefWidth="404.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fx:id="text_ID_lobbyCreate" fill="#004ba0" layoutX="54.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCESSO ALLA PARTITA" textAlignment="CENTER" wrappingWidth="296.0000054091215">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_know" layoutX="17.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ci sono ben 36 diverse frasi da indovinare" textAlignment="CENTER" wrappingWidth="369.64843612909317" />
+      <JFXButton fx:id="btn_LeaveORaccess" layoutX="137.0" layoutY="154.0" prefHeight="25.0" prefWidth="131.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0;" text="ABBANDONA" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" />
+      <Text fx:id="text_waitPlayer_Access" fill="#004ba0" layoutX="54.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IN ATTESA DI ALTRI GIOCATORI" textAlignment="CENTER" wrappingWidth="296.0000054091215">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="18.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sapevi che" textAlignment="CENTER" wrappingWidth="369.64843612909317" />
+      <JFXButton layoutX="123.0" layoutY="142.0" onAction="#btn_refreshPlayer" prefHeight="25.0" prefWidth="159.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #004ba0;" text="AGGIORNA GIOCATORI" textAlignment="CENTER" textFill="#004ba0" textOverrun="CLIP" visible="false">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_tutorial" layoutX="172.0" layoutY="101.0" prefHeight="366.0" prefWidth="608.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutorial">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Una partita è strutturata in 5 manches in cui competono 3 concorrenti." wrappingWidth="486.884765625" />
+      <Text layoutX="13.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'obbiettivo è quello di indovinare la frase misteriosa chiamando le consonanti che potrebbero comporre la frase,per ogni consonante indovinata il giocatore guadagna un certo numeri di punti." wrappingWidth="582.884765625" />
+      <Text layoutX="14.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Il concorrente che indovina la frase trasferisce tutti i punti guadagnati nella partita nel deposito." wrappingWidth="536.884765625" />
+      <Text layoutX="14.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chi alla fine delle 5 manches avrà più punti avrà vinto." wrappingWidth="486.884765625" />
+      <Text layoutX="14.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Come si gioca:" wrappingWidth="486.884765625">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Il giocatore gira la RUOTA" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- PASSA --&gt; Il giocatore TERMINA il turno" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- PERDE --&gt; Azzeramento dei punti e TERMINA il turno" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Jolly --&gt; Il giocatore ottiene un jolly per non perdere il turno tranne per PERDI" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Jolly --&gt; Il giocatore ottiene un jolly per non perdere il turno tranne per PERDI" wrappingWidth="486.884765625" />
+      <Text layoutX="14.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Se la ruota indica un punteggio" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Entro 5 secondi DEVE dire una CONSONANTE" wrappingWidth="486.884765625" />
+      <Text layoutX="14.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Se la consonante è presente nella frase ottiene i punti poi potrà" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Girare la RUOTA" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Dare la SOLUZIONE" wrappingWidth="486.884765625" />
+      <Text layoutX="27.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Comprare una VOCALE" wrappingWidth="486.884765625" />
+   </AnchorPane>
+</AnchorPane>

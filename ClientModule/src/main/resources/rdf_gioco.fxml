@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Gioco">
+   <AnchorPane fx:id="pane_top" prefHeight="20.0" prefWidth="931.0" style="-fx-background-color: #003c8f;">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="911.0" prefHeight="20.0" prefWidth="20.0" styleClass="close-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="1.5em" />
+         </graphic>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="891.0" prefHeight="20.0" prefWidth="20.0" styleClass="mini-btn" stylesheets="@Stylesheet.css" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="MINUS" onMouseClicked="#minus" size="1.5em" translateY="1.1" />
+         </graphic>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="pane_Player" layoutY="20.0" prefHeight="528.0" prefWidth="269.0" style="-fx-background-color: #dde4ea;">
+      <JFXButton fx:id="btn_consonant" layoutX="11.0" layoutY="162.0" onAction="#btn_consonant" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #1976d2;" text="CONSONANTE" textFill="WHITE" textOverrun="CLIP" />
+      <JFXButton fx:id="btn_vocal" layoutX="143.0" layoutY="162.0" onAction="#btn_vocal" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #1976d2;" text="COMPRA VOCALE" textFill="WHITE" textOverrun="CLIP" />
+      <JFXButton fx:id="btn_jolly" disable="true" layoutX="11.0" layoutY="215.0" onAction="#btn_jolly" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #1976d2;" text="USA JOLLY" textFill="WHITE" textOverrun="CLIP" />
+      <JFXButton fx:id="btn_solution" layoutX="143.0" layoutY="215.0" onAction="#btn_solution" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #1976d2;" text="SOLUZIONE" textFill="WHITE" textOverrun="CLIP" />
+      <Text layoutX="111.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RUOTA">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_resultSpin" layoutX="43.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="180.3583984375">
+         <font>
+            <Font name="System Bold" size="57.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btn_spin" layoutX="24.0" layoutY="386.0" onAction="#btn_spin" prefHeight="21.0" prefWidth="219.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="GIRA" textFill="WHITE" textOverrun="CLIP" />
+      <FontAwesomeIcon glyphName="ARCHIVE" layoutX="12.0" layoutY="510.0" size="3em" />
+      <Text fx:id="text_TotalPoint" layoutX="58.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" wrappingWidth="56.77149569988251" />
+      <FontAwesomeIcon glyphName="MONEY" layoutX="11.0" layoutY="464.0" size="3em" />
+      <Text fx:id="text_ManchesPoint" layoutX="58.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" />
+      <Separator layoutX="-9.0" layoutY="421.0" prefHeight="7.0" prefWidth="275.0" />
+      <Separator layoutY="272.0" prefHeight="7.0" prefWidth="269.0" />
+      <Text fx:id="text_Totaljolly" layoutX="161.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 JOLLY">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Separator layoutX="143.0" layoutY="430.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="6.0" />
+      <Text fx:id="text_ConsonantORSolution" layoutX="75.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSONANTE" textAlignment="CENTER" visible="false" wrappingWidth="111.85546731948853" />
+      <JFXButton fx:id="btn_ConsORVocalConfermation" layoutX="75.0" layoutY="241.0" onAction="#btn_ConsORVocalConfermation" prefHeight="25.0" prefWidth="112.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="CONFERMA" textFill="WHITE" textOverrun="CLIP" visible="false" />
+      <JFXTextArea fx:id="edit_Solution" focusColor="#1976d2" layoutX="24.0" layoutY="167.0" prefHeight="67.0" prefWidth="226.0" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextField fx:id="edit_ConsORVocal" alignment="CENTER" layoutX="13.0" layoutY="162.0" prefHeight="25.0" prefWidth="243.0" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btn_SolutionConfermation" layoutX="75.0" layoutY="241.0" onAction="#btn_SolutionConfermation" prefHeight="25.0" prefWidth="112.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="CONFERMA" textFill="WHITE" textOverrun="CLIP" visible="false" />
+      <Text layoutX="110.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEMPO" x="4.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_time" layoutX="88.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="90.572265625" x="4.0">
+         <font>
+            <Font name="System Bold" size="57.0" />
+         </font>
+      </Text>
+   </AnchorPane>
+   <Text fx:id="text_hint" fill="#004ba0" layoutX="301.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HINT" textAlignment="CENTER" wrappingWidth="597.9999898374081">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Text>
+   <GridPane layoutX="281.0" layoutY="124.0" prefHeight="385.0" prefWidth="598.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <Text fx:id="t33" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t25" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="5" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t24" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t23" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t15" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="5" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t14" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t13" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t5" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t4" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t3" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t19" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="9" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t52" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t51" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t50" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t18" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="8" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t42" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t41" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t40" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t17" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="7" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t32" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t31" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t30" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t7" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="7">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t22" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t21" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t20" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t11" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t12" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t8" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="8">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t29" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="9" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t39" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="9" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t38" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="8" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t28" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="8" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t49" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="9" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t56" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="6" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t48" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="8" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t46" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="6" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t57" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="7" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t36" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="6" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t26" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="6" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t16" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="6" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t6" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="6">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t58" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="8" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t59" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="9" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t47" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="7" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t37" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="7" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t10" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t27" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="7" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t9" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="9">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t2" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t1" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="1">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t54" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="4" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t53" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t45" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="5" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t44" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t43" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t34" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t35" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="5" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+      <Text fx:id="t55" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="60.13671875" GridPane.columnIndex="5" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+   </GridPane>
+   <Pane fx:id="pane_OnlySolution" layoutX="423.0" layoutY="226.0" prefHeight="97.0" prefWidth="353.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="75.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DAI LA SOLUZIONE!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fx:id="btn_closeOnlySolution" fill="#004ba0" glyphName="CLOSE" layoutX="332.0" layoutY="20.0" size="1.5em" />
+      <Text layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sono state trovate tutte le consonanti!" />
+      <FontAwesomeIcon fill="#004ba0" glyphName="WARNING" layoutX="22.0" layoutY="61.0" size="3em" />
+   </Pane>
+   <Pane fx:id="pane_loseTurn" layoutX="423.0" layoutY="226.0" prefHeight="97.0" prefWidth="353.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="75.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OH NO!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fx:id="btn_closeLoseTurn" fill="#004ba0" glyphName="CLOSE" layoutX="332.0" layoutY="20.0" onMouseClicked="#btn_closeLoseTurn" size="1.5em" />
+      <Text layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hai perso il turno!" />
+      <FontAwesomeIcon fill="#004ba0" glyphName="BOMB" layoutX="22.0" layoutY="61.0" size="3em" />
+   </Pane>
+   <Pane fx:id="pane_win" layoutX="423.0" layoutY="248.0" prefHeight="97.0" prefWidth="353.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="75.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FRASE INDOVINATA!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fx:id="btn_closeWin" fill="#004ba0" glyphName="CLOSE" layoutX="332.0" layoutY="20.0" size="1.5em" />
+      <Text fx:id="text_HowWinManches" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complimenti hai vinto" />
+      <FontAwesomeIcon fill="#004ba0" glyphName="TROPHY" layoutX="22.0" layoutY="61.0" size="3em" />
+   </Pane>
+   <Pane fx:id="pane_GameEnd" layoutX="388.0" layoutY="182.0" prefHeight="254.0" prefWidth="423.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="98.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PARTITA TERMINATA">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_HowWinGame" layoutX="70.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LA PARTITA E' STATA VINTA DA GIULIO" textAlignment="CENTER" wrappingWidth="282.0000115633011">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_EndPointWin" layoutX="107.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CON 8230 PUNTI" textAlignment="CENTER" wrappingWidth="208.880852535367" />
+      <JFXButton layoutX="153.0" layoutY="188.0" onAction="#btn_leave" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="ESCI" textFill="WHITE" textOverrun="CLIP" />
+   </Pane>
+   <Pane fx:id="pane_Leave" layoutX="388.0" layoutY="169.0" prefHeight="243.0" prefWidth="423.0" style="-fx-background-color: #f5f5f6;" visible="false">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Text fill="#004ba0" layoutX="39.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SICURO DI VOLER ABBANDONARE?">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LA PARTITA SI CONCLUDERA' PER TUTTI I GIOCATORI" textAlignment="CENTER" wrappingWidth="282.0000115633011">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="84.0" layoutY="171.0" onAction="#btn_leave" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="SI" textFill="WHITE" textOverrun="CLIP" />
+      <JFXButton layoutX="224.0" layoutY="171.0" onAction="#btn_NoLeave" prefHeight="38.0" prefWidth="117.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="NO" textFill="WHITE" textOverrun="CLIP" />
+   </Pane>
+   <JFXButton layoutX="832.0" layoutY="519.0" onAction="#btn_giveUp" prefHeight="25.0" prefWidth="97.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #004ba0;" text="ABBANDONA" textFill="WHITE" textOverrun="CLIP" />
+   <Pane layoutX="887.0" layoutY="191.0" prefHeight="185.0" prefWidth="134.0" style="-fx-border-color: #004ba0; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-width: 3; -fx-background-color: #dde4ea;">
+      <Pane fx:id="pane_H1" layoutX="10.0" layoutY="22.0" onMouseEntered="#pane_H1_E" onMouseExited="#pane_H1_X" prefHeight="29.0" prefWidth="29.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #1976d2;" visible="false">
+         <Text fx:id="text_number_H1" fill="WHITE" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER" wrappingWidth="29.00001734495163" y="2.0">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Text>
+      </Pane>
+      <Pane fx:id="pane_H2" layoutX="10.0" layoutY="58.0" onMouseEntered="#pane_H2_E" onMouseExited="#pane_H2_X" prefHeight="29.0" prefWidth="29.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #1976d2;" visible="false">
+         <Text fx:id="text_number_H2" fill="WHITE" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="29.00001734495163" y="2.0">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Text>
+      </Pane>
+      <Pane fx:id="pane_H3" layoutX="10.0" layoutY="94.0" onMouseEntered="#pane_H3_E" onMouseExited="#pane_H3_X" prefHeight="29.0" prefWidth="29.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #1976d2;" visible="false">
+         <Text fx:id="text_number_H3" fill="WHITE" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="29.00001734495163" y="2.0">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Text>
+      </Pane>
+      <Pane fx:id="pane_H4" layoutX="10.0" layoutY="130.0" onMouseEntered="#pane_H4_E" onMouseExited="#pane_H4_X" prefHeight="29.0" prefWidth="29.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #1976d2;" visible="false">
+         <Text fx:id="text_number_H4" fill="WHITE" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="29.00001734495163" y="2.0">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Text>
+      </Pane>
+   </Pane>
+   <Label fx:id="label_H1" layoutX="679.0" layoutY="204.0" prefHeight="45.0" prefWidth="219.0" text=" " visible="false">
+      <graphic>
+         <Pane prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #1976d2; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Polygon fill="#1976d2" layoutX="167.0" layoutY="57.0" points="30.0, -12.0, 51.0, -34.5, 30.0, -57.0" stroke="#1976d2" strokeType="INSIDE" />
+            <Text fx:id="text_NH1" fill="WHITE" layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simone" wrappingWidth="165.216796875" y="-3.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="text_MH1" fill="WHITE" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chiama S --&gt; 2000 punti" wrappingWidth="165.216796875" y="-3.0" />
+         </Pane>
+      </graphic>
+   </Label>
+   <Label fx:id="label_H2" layoutX="679.0" layoutY="240.0" prefHeight="45.0" prefWidth="219.0" text=" " visible="false">
+      <graphic>
+         <Pane prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #1976d2; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Polygon fill="#1976d2" layoutX="167.0" layoutY="57.0" points="30.0, -12.0, 51.0, -34.5, 30.0, -57.0" stroke="#1976d2" strokeType="INSIDE" />
+            <Text fx:id="text_NH2" fill="WHITE" layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ricky" wrappingWidth="165.216796875" y="-3.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="text_MH2" fill="WHITE" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perde Tutto --&gt; 4200 punti" wrappingWidth="165.216796875" y="-3.0" />
+         </Pane>
+      </graphic>
+   </Label>
+   <Label fx:id="label_H3" layoutX="679.0" layoutY="277.0" prefHeight="45.0" prefWidth="219.0" text=" " visible="false">
+      <graphic>
+         <Pane prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #1976d2; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Polygon fill="#1976d2" layoutX="167.0" layoutY="57.0" points="30.0, -12.0, 51.0, -34.5, 30.0, -57.0" stroke="#1976d2" strokeType="INSIDE" />
+            <Text fx:id="text_NH3" fill="WHITE" layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ale" wrappingWidth="165.216796875" y="-3.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="text_MH3" fill="WHITE" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perde Turno" wrappingWidth="165.216796875" y="-3.0" />
+         </Pane>
+      </graphic>
+   </Label>
+   <Label fx:id="label_H4" layoutX="679.0" layoutY="313.0" prefHeight="45.0" prefWidth="219.0" text=" " visible="false">
+      <graphic>
+         <Pane prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #1976d2; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <Polygon fill="#1976d2" layoutX="167.0" layoutY="57.0" points="30.0, -12.0, 51.0, -34.5, 30.0, -57.0" stroke="#1976d2" strokeType="INSIDE" />
+            <Text fx:id="text_NH4" fill="WHITE" layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nico" wrappingWidth="165.216796875" y="-3.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="text_MH4" fill="WHITE" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compra vocale A" wrappingWidth="165.216796875" y="-3.0" />
+         </Pane>
+      </graphic>
+   </Label>
+   <AnchorPane fx:id="pane_Spectator" layoutY="20.0" prefHeight="528.0" prefWidth="269.0" style="-fx-background-color: #dde4ea;" visible="false">
+      <Text layoutX="99.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RUOTA" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_spinO" layoutX="44.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="180.3583984375">
+         <font>
+            <Font name="System Bold" size="57.0" />
+         </font>
+      </Text>
+      <Separator layoutY="72.0" prefHeight="7.0" prefWidth="269.0" />
+      <FontAwesomeIcon glyphName="ARCHIVE" layoutX="216.0" layoutY="130.0" size="3em" />
+      <Text fx:id="text_player1GamePoint" layoutX="154.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" textAlignment="RIGHT" wrappingWidth="56.77149569988251" />
+      <FontAwesomeIcon glyphName="MONEY" layoutX="16.0" layoutY="130.0" size="3em" />
+      <Text fx:id="text_player1ManchesPoint" layoutX="63.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" />
+      <Text fx:id="text_jolly1" layoutX="98.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 JOLLY" textAlignment="CENTER" wrappingWidth="73.88671875">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_name1" fill="#1976d2" layoutX="76.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simo" textAlignment="CENTER" wrappingWidth="117.00000051409006">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutY="190.0" prefHeight="7.0" prefWidth="269.0" />
+      <FontAwesomeIcon glyphName="ARCHIVE" layoutX="216.0" layoutY="248.0" size="3em" />
+      <Text fx:id="text_player2GamePoint" layoutX="154.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" textAlignment="RIGHT" wrappingWidth="56.77149569988251" />
+      <FontAwesomeIcon glyphName="MONEY" layoutX="16.0" layoutY="248.0" size="3em" />
+      <Text fx:id="text_player2ManchesPoint" layoutX="63.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" />
+      <Text fx:id="text_jolly2" layoutX="98.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 JOLLY" textAlignment="CENTER" wrappingWidth="73.88671875">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_name2" fill="#1976d2" layoutX="76.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nico" textAlignment="CENTER" wrappingWidth="117.00000051409006">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutY="303.0" prefHeight="7.0" prefWidth="269.0" />
+      <FontAwesomeIcon glyphName="ARCHIVE" layoutX="216.0" layoutY="361.0" size="3em" />
+      <Text fx:id="text_player3GamePoint" layoutX="154.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" textAlignment="RIGHT" wrappingWidth="56.77149569988251" />
+      <FontAwesomeIcon glyphName="MONEY" layoutX="16.0" layoutY="361.0" size="3em" />
+      <Text fx:id="text_player3ManchesPoint" layoutX="63.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 punti" />
+      <Text fx:id="text_jolly3" layoutX="98.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 JOLLY" textAlignment="CENTER" wrappingWidth="73.88671875">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="text_name3" fill="#1976d2" layoutX="76.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ale" textAlignment="CENTER" wrappingWidth="117.00000051409006">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Separator layoutY="408.0" prefHeight="7.0" prefWidth="269.0" />
+   </AnchorPane>
+   <Text fx:id="text_ManchesNumber" layoutX="85.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manches 1/5" x="4.0">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="text_PlayerTurn" layoutX="45.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turno di " textAlignment="CENTER" wrappingWidth="179.35156716778874" x="4.0">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+</AnchorPane>
